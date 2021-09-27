@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Неопознанный енот](https://up.htmlacademy.ru/htmlcss/32/user/1920635).
-* Наставник: `Неизвестно`.
+* Студент: [Андрей Чвартацкий](https://up.htmlacademy.ru/htmlcss/32/user/1920635).
+* Наставник: [Дмитрий Бобровский](https://htmlacademy.ru/profile/id1429055)
 
 ---
 
