@@ -479,7 +479,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 107px;
+  width: 30%;
   margin: 0 71px;
   margin-right: 0;
   padding: 0;
@@ -491,7 +491,7 @@ body {
 }
 
 .phone-number {
-  width: 720px;
+  width: 40%;
   font-size: 40px;
   text-align: center;
   color: #000;
