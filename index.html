@@ -26,7 +26,7 @@
       </a>
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
-          <a class="navigation-link" href="img/main-page/search.svg" >
+          <a class="navigation-link navigation-link-find" href="img/main-page/search.svg" >
             <img src="img/main-page/search.svg" alt="search" width="18" height="17">
             <span class="visually-hidden">Поиск</span>
           </a>
@@ -71,7 +71,7 @@
           </div>
         </li>
         <li class="navigation-item">
-            <a class="button button-accent" href="#" >Хочу сюда!</a>
+            <a class="button button-accent open-modal" href="#" >Хочу сюда!</a>
         </li>
       </ul>
     </header>
@@ -226,9 +226,9 @@
           <label class="person-change">
             <span class="data-legend-child">Дети:</span>
             <span class="instruction">i</span>
-            <div class="children-notice arrow-box arrow-box-black">
-              <p>Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
-            </div>
+            <span class="children-notice arrow-box arrow-box-black">
+              Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+            </span>
             <a class="button-less" href="#">
               <img src="../img/main-page/minus.svg" alt="mode-slideshow" width="13" height="1">
               <span class="visually-hidden">Уменьшить количество детей</span>
@@ -246,7 +246,23 @@
       </div>
     </div>
     <div class="backdrop modal-close"></div>
+    <script>
+      var openModelBtn = document.querySelector('.open-modal');
+      var modalContent = document.querySelector('.modal-container');
+      var closeModelBtn = document.querySelector('.modal-close-button');
+      var backDrop = document.querySelector('.backdrop');
+
+      openModelBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalContent.classList.remove('modal-close');
+        backDrop.classList.remove('modal-close');
+      });
+      closeModelBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalContent.classList.add('modal-close');
+        backDrop.classList.add('modal-close');
+      });
+    </script>
   </body>
 </html>
 
-<!-- 8 lesson -->

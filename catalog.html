@@ -26,7 +26,7 @@
       </a>
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
-          <a class="navigation-link" href="img/main-page/search.svg" >
+          <a class="navigation-link navigation-link-find" href="img/main-page/search.svg" >
             <img src="img/main-page/search.svg" alt="search" width="18" height="17">
             <span class="visually-hidden">Поиск</span>
           </a>
@@ -79,7 +79,7 @@
           </div>
         </li>
         <li class="navigation-item">
-            <a class="button button-accent" href="#" >Хочу сюда!</a>
+            <a class="button button-accent open-modal" href="#" >Хочу сюда!</a>
         </li>
       </ul>
     </header>
@@ -156,7 +156,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="hotels-preferencies">
+            <fieldset class="hotels-preferencies hotels-price">
               <legend class="filter-title">Стоимость, ₽:</legend>
               <div class="price-range">
                 <label class="price-filter-label">
@@ -168,12 +168,10 @@
                   <span>до</span>
                 </label>
               </div>
-              <label class="price-filter-label">
-                <div class="fake-range">
-                  <button class="fake-range-btn"></button>
-                  <button class="fake-range-btn end-button"></button>
-                </div>
-              </label>
+              <div class="fake-range">
+                <button class="fake-range-btn"></button>
+                <button class="fake-range-btn end-button"></button>
+              </div>
             </fieldset>
             <div class="price-filter-group">
               <button class="button button-brand" type="submit">Применить</button>
