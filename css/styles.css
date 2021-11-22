@@ -327,7 +327,7 @@ body {
 
 .advantages-item-image {
   display: flex;
-  width: 1200px;
+  flex-wrap: wrap;
   color: #FFF;
   background: #83B3D3;
 }
@@ -361,7 +361,7 @@ body {
 }
 
 .advantages-discription-image {
-  max-width: 55%;
+  max-width: 60%;
   margin: 0 auto;
 }
 
@@ -372,6 +372,7 @@ body {
 
 .advantages-sublist {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   list-style: none;
 }
