@@ -20,7 +20,7 @@
           </li>
         </ul>
       </nav>
-      <a class="navigation-logo" href="http://127.0.0.1:5500/index.html#">
+      <a class="logo" href="http://127.0.0.1:5500/index.html#">
         <img class="page-header-logo" alt="logotip"
          src="img/main-page/logotip-sedona.png" width="138" height="70">
       </a>
@@ -154,7 +154,9 @@
         <h2 class="submit-title">Подпишитесь на рассылку</h2>
         <p class="submit-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="submit-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="e-mail-placeholder" type="email" name="e-mail" id="e-mail" placeholder="Ваш e-mail">
+          <label class="e-mail">
+            <input class="e-mail-placeholder" type="email" name="e-mail" id="e-mail" placeholder="Ваш e-mail">
+          </label>
           <button class="button button-brand button-subscribe" type="submit">Подписаться</button>
         </form>
       </section>
@@ -189,7 +191,7 @@
       </div>
     </footer>
     <div class="modal-container modal-close">
-      <div class="hotel-find">
+      <form class="hotel-find" action="https://echo.htmlacademy.ru/" method="post">
         <div class="modal-hero">
           <h3 class="hotel-find-title">Поиск гостиницы в Седоне</h3>
           <button class="modal-close-button">
@@ -241,9 +243,9 @@
           </label>
         </div>
         <div class="search">
-          <a class="button button-brand button-lg" href="#">Найти</a>
+          <button class="button button-brand button-lg" type="submit">Найти</a>
         </div>
-      </div>
+      </form>
     </div>
     <div class="backdrop modal-close"></div>
     <script>

@@ -20,7 +20,7 @@
           </li>
         </ul>
       </nav>
-      <a class="navigation-logo" href="#">
+      <a class="logo" href="#">
         <img class="page-header-logo" alt="logotip"
          src="img/main-page/logotip-sedona.png" width="138" height="70">
       </a>
@@ -175,12 +175,12 @@
             </fieldset>
             <div class="price-filter-group">
               <button class="button button-brand" type="submit">Применить</button>
-              <button class="price-filter-reset" type="submit">Сбросить</button>
+              <button class="price-filter-reset" type="reset">Сбросить</button>
             </div>
           </form>
         </div>
       </div>
-      <div class="page-container">
+      <div class="page-container page-container-sm">
         <section class="sorting">
           <h2 class="visually-hidden">Выбор гостиницы</h2>
           <p class="sorting-quantity">Найдено гостиниц: <span>38</span></p>
@@ -388,7 +388,9 @@
           <h2 class="submit-title submit-title-catalog">Подпишитесь на рассылку</h2>
           <p class="submit-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="submit-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="e-mail-placeholder" type="email" name="e-mail" id="e-mail" placeholder="Ваш e-mail">
+            <label class="e-mail">
+              <input class="e-mail-placeholder" type="email" name="e-mail" id="e-mail" placeholder="Ваш e-mail">
+            </label>
             <button class="button button-brand button-subscribe" type="submit">Подписаться</button>
           </form>
         </div>
@@ -423,5 +425,80 @@
         </div>
       </div>
     </footer>
+    <div class="modal-container modal-close">
+      <div class="hotel-find">
+        <div class="modal-hero">
+          <h3 class="hotel-find-title">Поиск гостиницы в Седоне</h3>
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+        </div>
+        <div class="data-number">
+          <label class="data">
+            <span class="data-legend">Дата заезда:</span>
+            <input class="data-field" type="date" name="data-in" value="2020-04-27">
+          </label>
+        </div>
+        <p class="form-message error">Мы не можем отправить вас в прошлое.</p>
+        <div class="data-number">
+          <label class="data">
+            <span class="data-legend">Дата выезда:</span>
+            <input class="data-field" type="date" name="data-out" value="2021-09-01">
+          </label>
+        </div>
+        <p class="form-message">На эти даты есть свободные номера. Пока есть.</p>
+        <div class="person-count">
+          <label class="person-change">
+            <span class="data-legend">Взрослые:</span>
+            <a class="button-less" href="#">
+              <img src="../img/main-page/minus.svg" alt="mode-slideshow" width="13" height="1">
+              <span class="visually-hidden">Уменьшить количество взрослых</span>
+            </a>
+            <input class="person-count-field" type="number" name="min-price" value="2">
+            <a class="button-more" href="#">
+              <img src="../img/main-page/plus.svg" alt="mode-slideshow" width="13" height="13">
+              <span class="visually-hidden">Увеличить количество взрослых</span>
+            </a>
+          </label>
+          <label class="person-change">
+            <span class="data-legend-child">Дети:</span>
+            <span class="instruction">i</span>
+            <span class="children-notice arrow-box arrow-box-black">
+              Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+            </span>
+            <a class="button-less" href="#">
+              <img src="../img/main-page/minus.svg" alt="mode-slideshow" width="13" height="1">
+              <span class="visually-hidden">Уменьшить количество детей</span>
+            </a>
+            <input class="person-count-field" type="number" name="min-price" value="1">
+            <a class="button-more" href="#">
+              <img src="../img/main-page/plus.svg" alt="mode-slideshow" width="13" height="13">
+              <span class="visually-hidden">Увеличить количество детей</span>
+            </a>
+          </label>
+        </div>
+        <div class="search">
+          <a class="button button-brand button-lg" href="#">Найти</a>
+        </div>
+      </div>
+    </div>
+    <div class="backdrop modal-close"></div>
+    <script>
+      var openModelBtn = document.querySelector('.open-modal');
+      var modalContent = document.querySelector('.modal-container');
+      var closeModelBtn = document.querySelector('.modal-close-button');
+      var backDrop = document.querySelector('.backdrop');
+
+      openModelBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalContent.classList.remove('modal-close');
+        backDrop.classList.remove('modal-close');
+      });
+      closeModelBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalContent.classList.add('modal-close');
+        backDrop.classList.add('modal-close');
+      });
+    </script>
   </body>
 </html>

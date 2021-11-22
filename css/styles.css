@@ -50,11 +50,12 @@ body {
 
 .navigation {
   width: calc((100% - 138px) / 2);
-  padding: 16px 71px 20px;
+  padding: 0 71px;
 }
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0;
   margin: 0;
@@ -68,11 +69,17 @@ body {
 
 .navigation-link {
   display: block;
-  padding: 24px 0;
+  padding: 22px 0;
   font-weight: bold;
   font-size: 20px;
   text-decoration: none;
   color: #000;
+}
+
+.navigation-link:hover,
+.navigation-link:active,
+.navigation-link:focus {
+  color: #7DB54F;
 }
 
 .active-link {
@@ -80,7 +87,7 @@ body {
   border-bottom: 2px solid #756257;
 }
 
-.navigation-logo {
+.logo {
   z-index: 1;
   height: 65px;
   align-self: flex-start;
@@ -90,7 +97,6 @@ body {
   justify-content: flex-end;
   width: calc((100% - 138px) / 2);
   padding: 15px 72px 14px 45px;
-  align-items: center;
 }
 
 .navigation-link-find {
@@ -178,6 +184,12 @@ body {
   border-radius: 24px;
 }
 
+.hotel-photo-item:hover,
+.hotel-photo-item:focus,
+.hotel-photo-item:active {
+  transform: scale(1.2);
+}
+
 .favorite-hotel-information {
   width: 244px;
   margin: 0;
@@ -194,10 +206,22 @@ body {
   text-decoration: none;
 }
 
+.hotel-card-link:hover,
+.hotel-card-link:focus,
+.hotel-card-link:active {
+  color: #7DB54F;
+}
+
 .favorite-hotel-type {
   margin: 0;
   padding: 5px 0;
   font-size: 16px;
+}
+
+.hotel-delete:hover,
+.hotel-delete:focus,
+.hotel-delete:active {
+  transform: scale(1.2);
 }
 
 .button {
@@ -212,6 +236,8 @@ body {
   text-decoration: none;
   color: #FFF;
   border-radius: 4px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 
 .button:hover,
@@ -266,6 +292,10 @@ body {
 .page-container {
   width: 1200px;
   margin: 0 auto;
+}
+
+.page-container-sm {
+  padding: 0 72px;
 }
 
 .introduction {
@@ -423,7 +453,7 @@ body {
 }
 
 .submit-section {
-  margin: 0 200px 138px;
+  padding: 0 200px 138px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -431,7 +461,6 @@ body {
 
 .submit-section-home {
   height: 100%;
-  margin: 0;
   padding: 98px 200px 94px;
   color: #FFF;
   background-image: url("../img/main-page/background.png");
@@ -455,8 +484,15 @@ body {
   justify-content: center;
 }
 
-.e-mail-placeholder {
+.e-mail {
+  display: block;
   width: 600px;
+}
+
+.e-mail-placeholder {
+  display: block;
+  width: 100%;
+  height: 100%;
   padding: 0 22px;
   font-family: PT Sans;
   font-size: 18px;
@@ -503,6 +539,10 @@ body {
   list-style: none;
 }
 
+.footer-social-item {
+  transition: all 0.3s ease-out;
+}
+
 .footer-social-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -510,7 +550,7 @@ body {
 .footer-social-item:hover,
 .footer-social-item:focus,
 .footer-social-item:active {
-  transform: scale(2);
+  transform: scale(1.2);
 }
 
 .phone-number {
@@ -520,12 +560,13 @@ body {
   text-align: center;
   color: #000;
   text-decoration: none;
+  transition: all 0.3s ease-out;
 }
 
 .phone-number:hover,
 .phone-number:focus,
 .phone-number:active {
-  transform: scale(1.2);
+  color: #83B3D3;
 }
 
 .social-link {
@@ -535,18 +576,19 @@ body {
 .html-logo {
   margin-left: 50px;
   padding-top: 5px;
+  transition: all 0.3s ease-out;
 }
 
 .html-logo:hover,
 .html-logo:focus,
 .html-logo:active {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .modal-container {
   position: fixed;
   left: 50%;
-  top: 50%;
+  top: 30%;
   z-index: 1;
   width: 715px;
   margin: auto;
@@ -555,7 +597,7 @@ body {
   background: #FFF;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
-  transform: translateX(-350px);
+  transform: translateX(-50%);
 }
 
 .modal-close {
@@ -584,6 +626,12 @@ body {
   background-image: url("../img/main-page/close.svg");
   cursor: pointer;
   border-radius: 50%;
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus,
+.modal-close-button:active {
+  transform: scale(1.2);
 }
 
 .data {
@@ -648,11 +696,23 @@ input::-webkit-inner-spin-button {
   z-index: 1;
 }
 
+.button-less:hover,
+.button-less:focus,
+.button-less:active {
+  transform: scale(1.2);
+}
+
 .button-more {
   position: absolute;
   right: 20px;
   top: 15px;
   z-index: 1;
+}
+
+.button-more:hover,
+.button-more:focus,
+.button-more:active {
+  transform: scale(1.2);
 }
 
 .person-count-field {
@@ -828,7 +888,9 @@ input::-webkit-inner-spin-button {
   position: relative;
   display: block;
   width: 20px;
+  min-width: 20px;
   height: 20px;
+  min-height: 20px;
   margin-right: 19px;
   border-radius: 4px;
   background: #FFF;
@@ -855,7 +917,9 @@ input[type="radio"]:checked + .control-mark::after {
   content: "";
   display: block;
   width: 10px;
+  min-width: 10px;
   height: 10px;
+  min-height: 10px;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -990,15 +1054,14 @@ input[type="radio"]:checked + .control-mark::after {
 .sorting-quantity {
   width: 40%;
   margin: 0;
-  margin-left: 73px;
   font-weight: bold;
   font-size: 30px;
   text-transform: uppercase;
 }
 
 .sorting-form {
-  width: 24%;
-  margin-left: 10px;
+  margin-right: 81px;
+  margin-left: auto;
 }
 
 .select-control {
@@ -1013,8 +1076,8 @@ input[type="radio"]:checked + .control-mark::after {
 
 .change-view {
   display: flex;
-  width: 22.5%;
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -1042,7 +1105,6 @@ input[type="radio"]:checked + .control-mark::after {
 
 .hotel-list {
   margin: 0;
-  margin-left: 74px;
   padding: 0;
   list-style: none;
 }
@@ -1104,7 +1166,6 @@ input[type="radio"]:checked + .control-mark::after {
   flex-direction: column;
   justify-content: space-between;
   margin-left: auto;
-  margin-right: 70px;
   margin-bottom: 10px;
 }
 
@@ -1134,8 +1195,9 @@ input[type="radio"]:checked + .control-mark::after {
 }
 
 .download-more {
+  display: block;
   width: 625px;
-  margin: 30px 290px;
+  margin: 30px auto;
   padding: 10px;
   border-radius: 4px;
 }
@@ -1143,19 +1205,19 @@ input[type="radio"]:checked + .control-mark::after {
 .page-change {
   display: flex;
   justify-content: space-between;
-  padding: 29px 65px 90px;
+  padding: 29px 0 90px;
   border-top: 1px solid #E6E6E6;
 }
 
 .pagination {
   display: flex;
   margin: 0;
-  padding: 0 9px;
+  padding: 0;
   list-style: none;
 }
 
 .pagination-item:not(:last-child) {
-  margin-right: 7px;
+  margin-right: 8px;
 }
 
 .pagination-link:last-child {
@@ -1179,14 +1241,12 @@ input[type="radio"]:checked + .control-mark::after {
 
 .hotels-on-page {
   margin-left: auto;
-  margin-right: 52px;
+  margin-right: 50px;
 }
 
 .hotels-control {
   width: 160px;
-  margin-top: 3px;
-  margin-right: 5px;
-  padding: 12px 15px;
+  padding: 14px 15px;
   font-size: 18px;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
