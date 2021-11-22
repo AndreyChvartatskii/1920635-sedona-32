@@ -27,6 +27,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  min-width: 1200px;
   min-height: 100%;
   margin: 0;
   font-family: "PT Sans", sans-serif;
@@ -48,14 +49,16 @@ body {
 }
 
 .navigation {
-  width: calc((100%-138px)/2);
+  width: calc((100% - 138px) / 2);
   padding: 16px 71px 20px;
 }
 
 .navigation-list {
   display: flex;
+  align-items: center;
   padding: 0;
   margin: 0;
+  min-height: 60px;
   list-style: none;
 }
 
@@ -64,22 +67,28 @@ body {
 }
 
 .navigation-link {
-  position: relative;
   display: block;
+  padding: 24px 0;
   font-weight: bold;
   font-size: 20px;
   text-decoration: none;
   color: #000;
 }
 
+.active-link {
+  z-index: 2;
+  border-bottom: 2px solid #756257;
+}
+
 .navigation-logo {
   z-index: 1;
   height: 65px;
+  align-self: flex-start;
 }
 
 .navigation-user {
   justify-content: flex-end;
-  width: calc((100%-138px)/2);
+  width: calc((100% - 138px) / 2);
   padding: 15px 72px 14px 45px;
   align-items: center;
 }
@@ -132,7 +141,6 @@ body {
   transform: translateX(-50%);
   z-index: 9;
   width: 400px;
-  height: 232px;
   border: 1px solid #E6E6E6;
   box-sizing: border-box;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
@@ -204,6 +212,12 @@ body {
   text-decoration: none;
   color: #FFF;
   border-radius: 4px;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  background-color: #7DB54F;
 }
 
 .open-modal {
@@ -299,7 +313,7 @@ body {
 
 .advantages-title {
   max-width: 60%;
-  margin: 0 auto;
+  margin: 0 auto 18px;
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
@@ -308,7 +322,7 @@ body {
 
 .advantages-title-num::after {
   display: block;
-  margin: 25px 0;
+  margin: 26px 0;
   counter-increment: item;
   content: "— №" counter(item) " — ";
   font-size: 18px;
@@ -359,16 +373,13 @@ body {
   align-items: center;
   height: 100%;
   max-height: 76px;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 .advantages-item-icon {
   flex: 0 0 auto;
   max-width: 100%;
   height: auto;
-}
-
-.advantages-item .advantages-title {
 }
 
 .advantages-description {
@@ -378,6 +389,7 @@ body {
 
 .advantages-title-num {
   max-width: 50%;
+  margin: 0 auto;
 }
 
 .if-interested {
@@ -385,14 +397,13 @@ body {
   flex-direction: column;
   align-items: center;
   width: 720px;
-  height: 235px;
-  margin: 90px auto;
+  margin: 0 auto;
+  padding: 96px 0 90px;
   text-align: center;
 }
 
 .if-interested-title {
-  margin: 0 0 31px;
-  padding: 6px;
+  margin: 0 0 36px;
   font-size: 30px;
   text-transform: uppercase;
 }
@@ -412,7 +423,6 @@ body {
 }
 
 .submit-section {
-  height: 222px;
   margin: 0 200px 138px;
   font-size: 22px;
   line-height: 26px;
@@ -420,9 +430,9 @@ body {
 }
 
 .submit-section-home {
-  height: 413px;
+  height: 100%;
   margin: 0;
-  padding: 98px 200px 138px;
+  padding: 98px 200px 94px;
   color: #FFF;
   background-image: url("../img/main-page/background.png");
   background-size: cover;
@@ -437,7 +447,7 @@ body {
 
 .submit-description {
   max-width: 55%;
-  margin: 0 auto 47px;
+  margin: 0 auto 45px;
 }
 
 .submit-form {
@@ -463,7 +473,7 @@ body {
 
 .button-subscribe {
   width: 200px;
-  height: 60px;
+  padding: 18px 0;
   font-family: PT Sans;
   font-size: 20px;
   border-radius: 0 10px 10px 0;
@@ -487,7 +497,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 20%;
-  margin: 0 7px;
+  margin: 0 10px;
   padding: 0;
   padding-top: 5px;
   list-style: none;
@@ -495,6 +505,12 @@ body {
 
 .footer-social-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.footer-social-item:hover,
+.footer-social-item:focus,
+.footer-social-item:active {
+  transform: scale(2);
 }
 
 .phone-number {
@@ -506,6 +522,12 @@ body {
   text-decoration: none;
 }
 
+.phone-number:hover,
+.phone-number:focus,
+.phone-number:active {
+  transform: scale(1.2);
+}
+
 .social-link {
   width: 20%;
 }
@@ -515,10 +537,16 @@ body {
   padding-top: 5px;
 }
 
+.html-logo:hover,
+.html-logo:focus,
+.html-logo:active {
+  transform: scale(1.5);
+}
+
 .modal-container {
-  position: absolute;
-  left: 22%;
-  top: 139%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
   z-index: 1;
   width: 715px;
   margin: auto;
@@ -527,6 +555,7 @@ body {
   background: #FFF;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
+  transform: translateX(-350px);
 }
 
 .modal-close {
@@ -721,8 +750,8 @@ input::-webkit-inner-spin-button {
 
 .hotel-choose-container {
   width: 1200px;
-  height: 408px;
   margin: 0 auto;
+  padding-bottom: 69px;
 }
 
 .inner-header {
@@ -837,7 +866,6 @@ input[type="radio"]:checked + .control-mark::after {
 .price-range {
   display: flex;
   width: 287px;
-  height: 48px;
   margin: 5px 0 20px;
   border: 2px solid #FFF;
   border-radius: 4px;
@@ -936,12 +964,20 @@ input[type="radio"]:checked + .control-mark::after {
 }
 
 .price-filter-reset {
-  margin-top: 20px;
+  margin-top: 10px;
+  padding: 10px;
   font-family: PT Sans;
   font-size: 18px;
   color: #FFF;
   background: none;
   border: none;
+  border-radius: 4px;
+}
+
+.price-filter-reset:hover,
+.price-filter-reset:focus,
+.price-filter-reset:active {
+  background-color: #FF5757;
 }
 
 .sorting {
@@ -986,6 +1022,12 @@ input[type="radio"]:checked + .control-mark::after {
   margin-right: 8px;
 }
 
+.change-view-item:hover,
+.change-view-item:focus,
+.change-view-item:active {
+  transform: scale(1.3);
+}
+
 .change-view-button {
   display: flex;
   width: 48px;
@@ -1006,7 +1048,6 @@ input[type="radio"]:checked + .control-mark::after {
 }
 
 .hotel {
-  height: 181px;
   border-top: 1px solid #E6E6E6;
 }
 
@@ -1018,7 +1059,7 @@ input[type="radio"]:checked + .control-mark::after {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 30px 0;
+  margin: 29px 0 21px;
 }
 
 .hotel-information {
@@ -1062,13 +1103,13 @@ input[type="radio"]:checked + .control-mark::after {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 117px;
   margin-left: auto;
   margin-right: 70px;
   margin-bottom: 10px;
 }
 
 .rank-stars {
+  margin-bottom: 58px;
   text-align: center;
 }
 
@@ -1094,8 +1135,7 @@ input[type="radio"]:checked + .control-mark::after {
 
 .download-more {
   width: 625px;
-  height: 55px;
-  margin: 31px 290px;
+  margin: 30px 290px;
   padding: 10px;
   border-radius: 4px;
 }
@@ -1144,7 +1184,6 @@ input[type="radio"]:checked + .control-mark::after {
 
 .hotels-control {
   width: 160px;
-  height: 48px;
   margin-top: 3px;
   margin-right: 5px;
   padding: 12px 15px;
