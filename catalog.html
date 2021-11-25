@@ -75,7 +75,7 @@
                 </div>
               </article>
               <div class="hotel-buttons-wrap">
-                <a class="button button-accent button-all" href="#">Все избранные</a>
+                <a class="button button-accent button-all favorite-button" href="#">Все избранные</a>
               </div>
             </form>
           </li>
@@ -97,7 +97,7 @@
                   </a>
                 </li>
                 <li class="breadcrumbs-item">
-                  <img src="img/hotels/Strelka.svg" alt="стрелка" width="5" height="8">
+                  <img src="img/hotels/strelka.svg" alt="стрелка." width="5" height="8">
                 </li>
                 <li class="breadcrumbs-item">
                   <a class="breadcrumbs-link breadcrumbs-link-catalog">Гостиницы</a>
@@ -413,7 +413,7 @@
               </li>
               <li class="footer-social-item">
                 <a class="social-link" href="https://www.youtube.com/c/HTMLAcademyRUS" target="_blank">
-                  <img src="img/footer/youtube.svg" alt="ютуб" width="20" height="16">
+                  <img src="img/footer/youtube.svg" alt="ютюб." width="20" height="16">
                   <span class="visually-hidden">Ютюб.</span>
                 </a>
               </li>
@@ -427,7 +427,7 @@
         </div>
       </footer>
       <div class="modal-container modal-close">
-        <div class="hotel-find">
+        <form class="hotel-find" action="https://echo.htmlacademy.ru/" method="post">
           <div class="modal-hero">
             <h3 class="hotel-find-title">Поиск гостиницы в Седоне</h3>
             <button class="modal-close-button">
@@ -479,9 +479,9 @@
             </label>
           </div>
           <div class="search">
-            <button class="button button-brand button-lg search-btn">Найти</button>
+            <button class="button button-brand button-lg search-btn" type="submit">Найти</button>
           </div>
-        </div>
+        </form>
       </div>
       <div class="backdrop modal-close"></div>
       <script>
