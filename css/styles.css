@@ -1571,6 +1571,23 @@ input[type="radio"]:checked + .control-mark::after {
   margin-right: 7.5px;
 }
 
+.pagination-link:hover {
+  background: #68A2CA;
+}
+
+.pagination-link:focus {
+  background: #68A2CA;
+  outline: 3px solid #756257;
+  border-radius: 4px;
+}
+
+.pagination-link:active {
+  background: #68A2CA;
+  outline: 3px solid #756257;
+  border-radius: 4px;
+  color: rgba(131, 179, 211, 0.8);
+}
+
 .pagination-link:last-child {
   margin-right: 0;
 }
@@ -1589,6 +1606,23 @@ input[type="radio"]:checked + .control-mark::after {
 .pagination-current {
   background: #F2F2F2;
   color: #000;
+}
+
+.pagination-current:hover {
+  background: #F2F2F2;
+  color: #000;
+}
+
+.pagination-current:focus {
+  background: #F2F2F2;
+  color: #000;
+  outline: none;
+}
+
+.pagination-current:active {
+  background: #F2F2F2;
+  color: #000;
+  outline: none;
 }
 
 .hotels-on-page {
